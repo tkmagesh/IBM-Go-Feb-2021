@@ -13,12 +13,11 @@
 
         function onBtnDoWorkClick(){
             displayMessage('Work Started');
-            setTimeout(triggerWork);
+            doWork(workCompleted);
         }
 
-        function triggerWork(){
-            doWork();
-            displayMessage('Work Completed');
+        function workCompleted(){
+             displayMessage('Work Completed');
         }
 
         function displayMessage(msg){
@@ -26,12 +25,25 @@
             divMessages.innerHTML += msg +'<br/>';   
         }
 
-        function doWork(){
-            for(var i=0; i<10000; i++)
-                for(var j=0; j<20000; j++)
-                    for(var k=0; k<100; k++){
+        function doWork(onWorkCompletion){
+            var totalIterations = 1000,
+                currentIteration = 0;
 
-                    }
+            function oneIteration(){
+                for(var i=0; i<(15000/totalIterations); i++)
+                    for(var j=0; j<20000; j++)
+                        for(var k=0; k<100; k++){
+
+                        }
+                ++currentIteration;
+                if (currentIteration < totalIterations){
+                    setTimeout(oneIteration);
+                } else {
+                    console.log('Job Done');
+                    onWorkCompletion();
+                }
+            }
+            setTimeout(oneIteration);
         }
 
         window.addEventListener('load', onDocumentLoad);
