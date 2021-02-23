@@ -1,0 +1,109 @@
+9:30 Start
+11:15 - Tea break for 20 mins
+1:00 - Lunch for 1 Hour
+3:30 - Tea break for 20 mins
+5:30 - Wind up
+
+Name
+Experience
+Primary Skillset
+Exposure to Go
+
+Why Go?
+
+     - C
+1980 - C++
+1995 - Ruby
+1997 - Java
+1999 - C#
+2010 - Go lang
+
+Time taken for Compilation
+Simpler Syntax
+    25 keywords
+
+Enhanced Package Management
+
+
+Concurrency
+    Multiple Threads
+        2 MB
+        Resource Intensive (Disadvantage)
+        Relatively simple implementation (Advantage)
+
+    Single Thread (Our application is executed using only one thread)
+        NOT resource intensive (Advantage)
+        Complex Implementation (Disadvantage)
+
+    go routines
+        one can run 1000s of go routines in ONE thread
+        each go routine using only 2 kb of memory
+        Scheduler is builtin in the runtime
+        concurrency is a language feature
+        builtin constructs in the language for concurrency
+            go, chan (data type), select, range
+
+No class
+    Class = blue print for an object
+    object = encapsulation of state & behavior
+        State (struct), Behavior (functions), abstraction (Interface)
+        Prefer composition over inheritance
+        
+No access modifiers
+Support for pointers
+Support for higher order functions
+    Functions are first class citizens
+    Functions can be treated like data
+        Functions can be assigned to variables
+        Higher order functions
+            Functions can be passed as arguments to other functions
+            Functions can be returned as return values from another function
+
+
+int x
+
+Variables
+Const
+Data types
+    bool
+    string
+    uint
+        uint8
+        uint16
+        uint32
+        uint64
+    int
+        int8
+        int16
+        int32
+        int64
+    float32
+    float64
+
+    complex64
+    complex128
+
+    byte (alias for uint8)
+    rune (alias for uint32, represents a Unicode code point)
+
+    array
+        fixed length
+        can have only the data of the same type
+        use indexer to access the values of the array
+
+    slice
+        built on top of the array
+        can be of varying size
+        can have the data of the same type
+        supports the slice operation
+
+    map
+        collection of key/value pairs
+        dynamic size
+        type of the key and value can vary
+
+    No implicit type conversion
+        Syntax for type casting is Type(value)
+
+    int32 x = 10
+    int64 y = int64(x)
