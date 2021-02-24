@@ -12,5 +12,9 @@ func main() {
 	//utils.WordStats()
 	//utils.SwitchDemo()
 	//fmt.Println(utils.Divide(30, 8))
-	fmt.Println(utils.Sum(3, 1, 4, 2, 5))
+	//fmt.Println(utils.Sum(3, 1, 4, 2, 5))
+	evenNoGenerator := utils.EvenNumbers()
+	for index := 0; index < 5; index++ {
+		fmt.Println(evenNoGenerator())
+	}
 }

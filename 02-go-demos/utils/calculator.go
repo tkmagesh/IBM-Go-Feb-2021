@@ -20,3 +20,11 @@ func Sum(nos ...int) int {
 	}
 	return result
 }
+
+func EvenNumbers() func() int {
+	n := 0
+	return func() int {
+		n += 2
+		return n
+	}
+}
