@@ -56,7 +56,7 @@ var (
 	id, name, age, location = 100, "Magesh", 40, "Bangalore"
 )
 
-func main() {
+func Test() {
 	fmt.Println(utils.Message)
 	utils.Greet()
 	//
