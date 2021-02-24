@@ -107,3 +107,20 @@ Data types
 
     int32 x = 10
     int64 y = int64(x)
+
+
+GOROOT
+    go tools and binaries are installed
+
+GOPATH
+
+    src
+        Proj1
+        Proj2
+
+    pkg
+
+Go Modules
+
+    To create a module
+    go mod init <module-name>

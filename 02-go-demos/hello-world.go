@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go-demos/utils"
 )
 
 //package level variables
@@ -56,6 +57,8 @@ var (
 )
 
 func main() {
+	fmt.Println(utils.Message)
+	utils.Greet()
 	//
 	/* var pi = 3.14 */
 
@@ -67,7 +70,7 @@ func main() {
 
 	fmt.Println(y)
 	fmt.Println("Hello world!")
-	fmt.Println(add(100, 200))
+	fmt.Println(utils.Add(1000, 2000))
 	fmt.Printf("pi = %v\n", pi)
 	fmt.Printf("type of pi = %T\n", pi)
 
@@ -82,6 +85,6 @@ func add(x int, y int) int {
 }
 */
 
-func add(x, y int) int {
+/* func add(x, y int) int {
 	return x + y
-}
+} */
