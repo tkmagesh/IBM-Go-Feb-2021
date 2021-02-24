@@ -5,3 +5,18 @@ package utils
 func Add(x, y int) int {
 	return x + y
 }
+
+func Divide(x, y int) (int, int) {
+	q := x / y
+	r := x % y
+	return q, r
+}
+
+//variadic function
+func Sum(nos ...int) int {
+	result := 0
+	for _, val := range nos {
+		result += val
+	}
+	return result
+}
