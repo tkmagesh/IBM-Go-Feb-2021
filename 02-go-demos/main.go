@@ -4,6 +4,11 @@ import (
 	"go-demos/utils"
 )
 
+type Product struct {
+	utils.Identity
+}
+
+/* the above product DOESNOT implement the Display method (Displayable) */
 func main() {
 	//Test()
 	//utils.SliceDemo()
@@ -67,6 +72,21 @@ func main() {
 		emp.PrintIdentity() */
 
 	//emp := &utils.Employee{Identity: utils.Identity{Id: 100, Name: "Magesh"}, IsEmployed: true, City: "Bangalore"}
-	emp := &utils.Employee{utils.Identity{100, "Magesh"}, true, "Banglaore"}
+	//emp := &utils.Employee{utils.Identity{100, "Magesh"}, true, "Banglaore"}
+
+	/* emp := utils.NewEmployee(100, "Magesh", true, "Bangalore")
 	emp.PrintIdentity()
+
+	dept := &utils.Department{utils.Identity{2001, "Sales"}}
+	dept.PrintIdentity() */
+
+	emp := utils.NewEmployee(100, "Magesh", true, "Bangalore")
+	//utils.PrintData(emp)
+	utils.NewPrintData(emp)
+
+	dept := &utils.Department{utils.Identity{2001, "Sales"}}
+	utils.PrintData(dept)
+
+	//product := &Product{utils.Identity{5000, "Pen"}}
+
 }

@@ -2,15 +2,6 @@ package utils
 
 import "fmt"
 
-type Identity struct {
-	Id   int
-	Name string
-}
-
-func (i *Identity) PrintIdentity() {
-	fmt.Printf("Id = %d, Name = %s\n", i.Id, i.Name)
-}
-
 type Employee struct {
 	Identity
 	IsEmployed bool
@@ -22,18 +13,10 @@ func (e *Employee) ToggleEmploymentStatus() {
 	fmt.Printf(" Inside toggle fn : %v\n", e)
 }
 
+func NewEmployee(id int, name string, isEmployed bool, city string) *Employee {
+	return &Employee{Identity{id, name}, isEmployed, city}
+}
+
 func (e *Employee) Display() {
-	fmt.Println(e)
+	fmt.Printf("Id=%d, Name=%s, IsEmployed=%t, City=%s\n", e.Id, e.Name, e.IsEmployed, e.City)
 }
-
-type Department struct {
-	Identity
-}
-
-func (d *Department) Display() {
-	fmt.Println(d)
-}
-
-/* func (d *Department) PrintIdentity() {
-	fmt.Printf("Id = %d, Name = %s\n", d.Id, d.Name)
-} */
