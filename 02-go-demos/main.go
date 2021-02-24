@@ -4,5 +4,6 @@ import "go-demos/utils"
 
 func main() {
 	//Test()
-	utils.SliceDemo()
+	//utils.SliceDemo()
+	utils.MapDemos()
 }
