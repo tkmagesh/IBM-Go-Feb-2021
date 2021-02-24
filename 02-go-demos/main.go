@@ -6,5 +6,6 @@ func main() {
 	//Test()
 	//utils.SliceDemo()
 	//utils.MapDemos()
-	utils.WordStats()
+	//utils.WordStats()
+	utils.SwitchDemo()
 }
