@@ -5,5 +5,6 @@ import "go-demos/utils"
 func main() {
 	//Test()
 	//utils.SliceDemo()
-	utils.MapDemos()
+	//utils.MapDemos()
+	utils.WordStats()
 }
