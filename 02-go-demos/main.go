@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"go-demos/utils"
 )
 
@@ -91,7 +90,26 @@ func main() {
 	//product := &Product{utils.Identity{5000, "Pen"}}
 
 	//type aliasing
-	fmt.Println(utils.MyStr("This is sample text").Uppercase())
-	fmt.Println(utils.MyFloat(float64(-100)).Abs())
-	fmt.Println(utils.MyFloat(float64(100)).Abs())
+	/*
+		fmt.Println(utils.MyStr("This is sample text").Uppercase())
+		fmt.Println(utils.MyFloat(float64(-100)).Abs())
+		fmt.Println(utils.MyFloat(float64(100)).Abs())
+	*/
+
+	//universal type
+	//var x int = 10
+	//var x bool = true
+	//utils.PrintType(x)
+
+	var x utils.Any
+	x = 10
+	utils.PrintType(x)
+	x = "Magesh"
+	utils.PrintType(x)
+	x = true
+	utils.PrintType(x)
+
+	dept := &utils.Department{utils.Identity{2001, "Sales"}}
+	utils.PrintType(dept)
+
 }
