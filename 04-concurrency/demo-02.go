@@ -24,6 +24,6 @@ func main() {
 	fmt.Println("executing test fn concurrently")
 	go test(ch)
 	fmt.Println(("Writing data into the channel"))
-	ch <- 10
+	//ch <- 10
 	fmt.Println("main fn exits")
 }
