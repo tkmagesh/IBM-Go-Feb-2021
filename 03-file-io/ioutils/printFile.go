@@ -18,6 +18,7 @@ func PrintFile() (err error) {
 		err = inputError
 		return
 	}
+
 	inputReader := bufio.NewReader(inputHandle)
 	for {
 		line, err := inputReader.ReadString('\n')
