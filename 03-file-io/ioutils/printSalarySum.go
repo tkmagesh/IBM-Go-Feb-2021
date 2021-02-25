@@ -22,7 +22,11 @@ func PrintSalarySum() {
 		if err == io.EOF {
 			break
 		}
-		sal, _ := strconv.ParseFloat(data[2], 64)
+		sal, err := strconv.ParseFloat(data[2], 64)
+		if err != nil {
+			fmt.Printf("Parse error %v\n", data[2])
+			continue
+		}
 		sum += sal
 	}
 	fmt.Printf("Sum of salary = %v\n", sum)

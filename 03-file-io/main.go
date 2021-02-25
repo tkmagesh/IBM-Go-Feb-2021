@@ -2,6 +2,7 @@ package main
 
 import (
 	"file-io/ioutils"
+	"fmt"
 )
 
 func main() {
@@ -14,4 +15,11 @@ func main() {
 
 	//ioutils.CopyFileContents()
 	ioutils.PrintSalarySum()
+	x := test()
+	r, _ := x.(int)
+	fmt.Println(r + 10)
+}
+
+func test() interface{} {
+	return 10
 }
