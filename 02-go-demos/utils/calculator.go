@@ -1,15 +1,21 @@
 package utils
 
+import "errors"
+
 /* var Message string = "[Default message]" */
 
 func Add(x, y int) int {
 	return x + y
 }
 
-func Divide(x, y int) (int, int) {
-	q := x / y
-	r := x % y
-	return q, r
+func Divide(x, y int) (q int, r int, err error) {
+	if y == 0 {
+		err = errors.New("Invalid argument error!")
+		return
+	}
+	q = x / y
+	r = x % y
+	return
 }
 
 //variadic function

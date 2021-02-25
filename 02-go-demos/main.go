@@ -114,14 +114,52 @@ func main() {
 	utils.PrintType(dept) */
 
 	//defer
-	test()
+	/* fmt.Printf("result = %d\n", test()) */
+
+	//error handling
+	q, r, err := utils.Divide(10, 0)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Printf("q=%d, r=%d \n", q, r)
 }
 
-func test() {
-	defer test2()
+func test() (result int) {
+
+	defer func() {
+		fmt.Println("from the deferred function")
+		result = 10
+	}()
+
 	fmt.Println("test function invoked")
+	result = 0
+	return
 }
 
 func test2() {
 	fmt.Println("test2 function invoked")
 }
+
+func test3() {
+	fmt.Println("test3 function invoked")
+}
+
+/* func openFile() bool {
+	file.Open("test.txt")
+	if failure {
+		file.Close()
+		return false
+	}
+	file.Close()
+	return true
+} */
+
+/* func openFile() bool {
+	file.Open("test.txt")
+	defer file.Close()
+	if failure {
+		return false
+	}
+	return true
+} */
