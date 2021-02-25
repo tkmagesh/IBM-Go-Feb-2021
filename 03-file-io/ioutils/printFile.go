@@ -9,12 +9,11 @@ import (
 
 func PrintFile() (err error) {
 	inputHandle, inputError := os.Open("data1.dat")
-	
-	defer func(){
-		inputHandle.Close()
-	)()
 
-	
+	defer func() {
+		inputHandle.Close()
+	}()
+
 	if inputError != nil {
 		err = inputError
 		return
