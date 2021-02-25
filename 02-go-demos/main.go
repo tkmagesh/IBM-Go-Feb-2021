@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"go-demos/utils"
 )
 
@@ -80,13 +81,17 @@ func main() {
 	dept := &utils.Department{utils.Identity{2001, "Sales"}}
 	dept.PrintIdentity() */
 
-	emp := utils.NewEmployee(100, "Magesh", true, "Bangalore")
+	/* emp := utils.NewEmployee(100, "Magesh", true, "Bangalore")
 	//utils.PrintData(emp)
 	utils.NewPrintData(emp)
 
 	dept := &utils.Department{utils.Identity{2001, "Sales"}}
-	utils.PrintData(dept)
+	utils.PrintData(dept) */
 
 	//product := &Product{utils.Identity{5000, "Pen"}}
 
+	//type aliasing
+	fmt.Println(utils.MyStr("This is sample text").Uppercase())
+	fmt.Println(utils.MyFloat(float64(-100)).Abs())
+	fmt.Println(utils.MyFloat(float64(100)).Abs())
 }
