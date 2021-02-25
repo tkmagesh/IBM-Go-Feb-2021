@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"go-demos/utils"
 )
 
@@ -101,7 +102,7 @@ func main() {
 	//var x bool = true
 	//utils.PrintType(x)
 
-	var x utils.Any
+	/* var x utils.Any
 	x = 10
 	utils.PrintType(x)
 	x = "Magesh"
@@ -110,6 +111,17 @@ func main() {
 	utils.PrintType(x)
 
 	dept := &utils.Department{utils.Identity{2001, "Sales"}}
-	utils.PrintType(dept)
+	utils.PrintType(dept) */
 
+	//defer
+	test()
+}
+
+func test() {
+	defer test2()
+	fmt.Println("test function invoked")
+}
+
+func test2() {
+	fmt.Println("test2 function invoked")
 }
