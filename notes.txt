@@ -132,3 +132,15 @@ length of the word - # of words
 2 - 12
 3 - 5
 4 - 15
+
+Channels
+    Data type used to synchronize goroutines
+
+    //creation
+    ch := make(chan int)
+
+    //writing data into the channel
+    ch <- 10
+
+    //reading data from the channel
+    v := <- c
