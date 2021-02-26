@@ -6,6 +6,7 @@ type Employee struct {
 	Identity
 	IsEmployed bool
 	City       string
+	Orgs       []string
 }
 
 func (e *Employee) ToggleEmploymentStatus() {
@@ -14,7 +15,7 @@ func (e *Employee) ToggleEmploymentStatus() {
 }
 
 func NewEmployee(id int, name string, isEmployed bool, city string) *Employee {
-	return &Employee{Identity{id, name}, isEmployed, city}
+	return &Employee{Identity{id, name}, isEmployed, city, make([]string, 10)}
 }
 
 func (e *Employee) Display() {
