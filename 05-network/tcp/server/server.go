@@ -31,10 +31,10 @@ func handleRequest(conn net.Conn) {
 		buff := make([]byte, 512)
 		_, err := conn.Read(buff)
 		if err != nil {
-			fmt.Println("error reading from conn", err)
-			return
+			fmt.Println(err)
+			break
 		}
-		fmt.Printf("Received dat : %v", string(buff))
+		fmt.Printf("Received data : %v", string(buff))
 		fmt.Println("Enter the response")
 		response, _ = inputReader.ReadString('\n')
 		conn.Write([]byte(response))
