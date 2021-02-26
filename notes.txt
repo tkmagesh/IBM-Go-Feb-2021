@@ -144,3 +144,8 @@ Channels
 
     //reading data from the channel
     v := <- c
+
+
+Testing results in color
+    go get -u github.com/rakyll/gotest
+    gotest
