@@ -149,3 +149,7 @@ Channels
 Testing results in color
     go get -u github.com/rakyll/gotest
     gotest
+
+
+Resource:
+https://quii.gitbook.io/learn-go-with-tests
