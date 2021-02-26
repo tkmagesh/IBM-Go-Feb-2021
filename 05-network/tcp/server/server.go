@@ -19,7 +19,7 @@ func main() {
 			fmt.Println("Error accepting incoming connections", err)
 			return
 		}
-		handleRequest(conn)
+		go handleRequest(conn)
 	}
 
 }
